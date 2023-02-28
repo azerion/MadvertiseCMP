@@ -1,0 +1,11 @@
+framework module MAdvertiseCMP {
+  umbrella header "MAdvertiseCMP.h"
+
+  export *
+  module * { export * }
+}
+
+module MAdvertiseCMP.Swift {
+  header "MAdvertiseCMP-Swift.h"
+  requires objc
+}

@@ -1,0 +1,461 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MAdvertiseCMP
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AdSupport
+import AppTrackingTransparency
+import CoreLocation
+import Foundation
+@_exported import MAdvertiseCMP
+import SafariServices
+import Swift
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+@objc public class CMPVendorList : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let vendorListVersion: Swift.Int
+  @objc final public let lastUpdated: Foundation.Date
+  @objc public var purposes: [MAdvertiseCMP.CMPPurpose]
+  @objc final public let features: [MAdvertiseCMP.CMPFeature]
+  @objc public var vendors: [MAdvertiseCMP.CMPVendor]
+  @objc public var askAgain: Swift.Double
+  @objc public var activatedVendors: [MAdvertiseCMP.CMPVendor] {
+    @objc get
+  }
+  @objc public var maxVendorId: Swift.Int {
+    @objc get
+  }
+  @objc public var maxVendorLIgId: Swift.Int {
+    @objc get
+  }
+  @objc public var vendorCount: Swift.Int {
+    @objc get
+  }
+  @objc public var activatedVendorCount: Swift.Int {
+    @objc get
+  }
+  @objc public var gvlSpecificationVersion: Swift.Int
+  @objc public var tcfPolicyVersion: Swift.Int
+  @objc public var specialPurposes: [MAdvertiseCMP.CMPPurpose]
+  @objc public var specialFeatures: [MAdvertiseCMP.CMPFeature]
+  @objc public var stacks: [MAdvertiseCMP.CMPStack]
+  @objc public var cmpButtons: [MAdvertiseCMP.CMPButton]
+  @objc public var privacyPolicyDescription: Swift.String?
+  @objc public var consentToolTitle: Swift.String?
+  @objc public var consentToolText: Swift.String?
+  @objc public var externalVendors: [MAdvertiseCMP.CMPExternalVendor]
+  @objc public var externalPurposes: [MAdvertiseCMP.CMPPurpose]
+  @objc public var googleATPVendors: [MAdvertiseCMP.CMPExternalVendor]
+  @objc public var cache: Swift.Double
+  @objc public var checksum: Swift.String?
+  @objc public var closeButton: Swift.Int
+  @objc public var publisherRestriction: [MAdvertiseCMP.CMPPublisherRestrictionEntry]
+  @objc public var iosAttCheck: Swift.Int
+  @objc public var hideLI: Swift.Int
+  @objc public init(vendorListVersion: Swift.Int, lastUpdated: Foundation.Date, purposes: [MAdvertiseCMP.CMPPurpose], features: [MAdvertiseCMP.CMPFeature], vendors: [MAdvertiseCMP.CMPVendor], askAgain: Swift.Double, gvlSpecificationVersion: Swift.Int, tcfPolicyVersion: Swift.Int, specialPurposes: [MAdvertiseCMP.CMPPurpose], specialFeatures: [MAdvertiseCMP.CMPFeature], stacks: [MAdvertiseCMP.CMPStack], cache: Swift.Double, privacyPolicyDescription: Swift.String?, consentToolTitle: Swift.String?, consentToolText: Swift.String?, buttons: [MAdvertiseCMP.CMPButton], externalVendors: [MAdvertiseCMP.CMPExternalVendor], externalPurposes: [MAdvertiseCMP.CMPPurpose], googleATPVendors: [MAdvertiseCMP.CMPExternalVendor], checksum: Swift.String?, closeButton: Swift.Int, iosAttCheck: Swift.Int, hideLI: Swift.Int)
+  @objc convenience public init?(jsonData: Foundation.Data)
+  @objc convenience public init?(jsonData: Foundation.Data, localizedJsonData: Foundation.Data?)
+  @objc convenience public init?(jsonDict: [Swift.String : Any])
+  @objc public func purpose(forId id: Swift.Int) -> MAdvertiseCMP.CMPPurpose?
+  @objc public func externalPurpose(forId id: Swift.Int) -> MAdvertiseCMP.CMPPurpose?
+  @objc public func purposeLG(forId id: Swift.Int) -> MAdvertiseCMP.CMPPurpose?
+  @objc public func listVendorLG() -> [MAdvertiseCMP.CMPVendor]
+  @objc public func listLGPurpose() -> [MAdvertiseCMP.CMPPurpose]
+  @objc public func isActiveLG(valueVendor: [MAdvertiseCMP.CMPVendor], idPupose: Swift.Int) -> Swift.Bool
+  @objc public func specialPurposes(forId id: Swift.Int) -> MAdvertiseCMP.CMPPurpose?
+  @objc public func feature(forId id: Swift.Int) -> MAdvertiseCMP.CMPFeature?
+  @objc public func specialFeatures(forId id: Swift.Int) -> MAdvertiseCMP.CMPFeature?
+  @objc public func vendor(forId id: Swift.Int) -> MAdvertiseCMP.CMPVendor?
+  @objc public func vendorLG(forId id: Swift.Int) -> MAdvertiseCMP.CMPVendor?
+  @objc public func purposeName(forId id: Swift.Int) -> Swift.String?
+  @objc public func specialPurposeName(forId id: Swift.Int) -> Swift.String?
+  @objc public func externalPurposeName(forId id: Swift.Int) -> Swift.String?
+  @objc public func purposeDescription(forId id: Swift.Int) -> Swift.String?
+  @objc public func specialPurposeDescription(forId id: Swift.Int) -> Swift.String?
+  @objc public func externalPurposeDescription(forId id: Swift.Int) -> Swift.String?
+  @objc public func purposeSpecialName(forId id: Swift.Int) -> Swift.String?
+  @objc public func purposeSpecialDescription(forId id: Swift.Int) -> Swift.String?
+  @objc public func featureName(forId id: Swift.Int) -> Swift.String?
+  @objc public func featureDescription(forId id: Swift.Int) -> Swift.String?
+  @objc public func featureSpecilaName(forId id: Swift.Int) -> Swift.String?
+  @objc public func featureSpecialDescription(forId id: Swift.Int) -> Swift.String?
+  @objc public func vendorName(forId id: Swift.Int) -> Swift.String?
+  @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
+  public static func == (lhs: MAdvertiseCMP.CMPVendorList, rhs: MAdvertiseCMP.CMPVendorList) -> Swift.Bool
+  @objc public static func parsePublisherResctriction(externalPurposesPub: [MAdvertiseCMP.CMPPurpose], vendorsPub: [MAdvertiseCMP.CMPVendor]) -> [MAdvertiseCMP.CMPPublisherRestrictionEntry]
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc public class CMPConsentToolConfiguration : ObjectiveC.NSObject {
+  public init(logo: UIKit.UIImage, dataManagement: MAdvertiseCMP.DataManagement?, consentToolManagement: MAdvertiseCMP.ConsentToolManagement?, consentToolColorPalette: MAdvertiseCMP.ConsentToolColorPalette?, consentToolCloseButton: MAdvertiseCMP.ConsentToolCloseButton?)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class CMPVersionConfig : ObjectiveC.NSObject {
+  @objc public static let LATEST: MAdvertiseCMP.CMPVersionConfig
+  @objc final public let version: Swift.Int
+  @objc deinit
+}
+public struct ConsentToolCloseButton {
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class CMPConsentManager : ObjectiveC.NSObject, MAdvertiseCMP.CMPConsentToolManagerDelegate {
+  @objc(sharedInstance) public static let shared: MAdvertiseCMP.CMPConsentManager
+  @objc weak public var delegate: MAdvertiseCMP.CMPConsentManagerDelegate?
+  @objc public var subjectToGDPR: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var tcfString: MAdvertiseCMP.TCFString? {
+    @objc get
+    @objc set
+  }
+  @objc public var madvertiseConsentString: MAdvertiseCMP.MadvertiseConsentString? {
+    @objc get
+    @objc set
+  }
+  public var config: MAdvertiseCMP.CMPConfig?
+  public var appID: Swift.String?
+  @objc public static let DEFAULT_VENDORLIST_REFRESH_TIME: Swift.Double
+  @objc public static let DEFAULT_MADVERTISE_PURPOSE_LIST_REFRESH_TIME: Swift.Double
+  @objc public static let DEFAULT_LAT_VALUE: Swift.Bool
+  @objc public func configure(_ configfile: Swift.String, language: MAdvertiseCMP.CMPLanguage, appId: Swift.String, publisherCC: Swift.String)
+  @objc public func configureWithoutShowCmp(appId: Swift.String, publisherCC: Swift.String)
+  @objc public func configure(_ configfile: Swift.String, language: MAdvertiseCMP.CMPLanguage, appId: Swift.String, publisherCC: Swift.String, autoClose: Swift.Bool)
+  @objc public func configure(refreshInterval: Foundation.TimeInterval = CMPConsentManager.DEFAULT_VENDORLIST_REFRESH_TIME, language: MAdvertiseCMP.CMPLanguage = CMPLanguage.DEFAULT_LANGUAGE, consentToolConfiguration: MAdvertiseCMP.CMPConsentToolConfiguration?, showConsentToolWhenLimitedAdTracking: Swift.Bool = CMPConsentManager.DEFAULT_LAT_VALUE, appId: Swift.String, publisherCC: Swift.String)
+  @objc public func refreshVendorsList()
+  @objc public func showConsentTool(fromController controller: UIKit.UIViewController, withPopup: Swift.Bool) -> Swift.Bool
+  @objc public func acceptAllConsentTool()
+  @objc public func refuseAllConsentTool()
+  @objc public func getExternalPurposesIDs() -> [Swift.Int]
+  @objc public func getPurposesIDs() -> [Swift.Int]
+  @objc public func updateExternalPurposesIDs(_ externalPurposes: [Swift.Int], vendors: [Swift.Int]?, externalvendors: [Swift.Int]?, type: Swift.Bool)
+  public func consentToolManager(_ consentToolManager: MAdvertiseCMP.CMPConsentToolManager, didFinishWithTcfConsentString tcfConsentString: MAdvertiseCMP.TCFString)
+  public func consentToolManager(_ consentToolManager: MAdvertiseCMP.CMPConsentToolManager, didChoiceWithoutTcfConsentString tcfConsentString: MAdvertiseCMP.TCFString)
+  public func consentToolManager(_ consentToolManager: MAdvertiseCMP.CMPConsentToolManager, didFinishWithMadvertiseConsentString madvertiseConsentString: MAdvertiseCMP.MadvertiseConsentString)
+  @objc deinit
+}
+extension MAdvertiseCMP.CMPConsentString {
+  public static func consentStringWithNoConsent(consentScreen: Swift.Int, consentLanguage: MAdvertiseCMP.CMPLanguage, vendorList: MAdvertiseCMP.CMPVendorList, date: Foundation.Date = Date()) -> MAdvertiseCMP.CMPConsentString
+  public static func consentStringWithFullConsent(consentScreen: Swift.Int, consentLanguage: MAdvertiseCMP.CMPLanguage, vendorList: MAdvertiseCMP.CMPVendorList, date: Foundation.Date = Date()) -> MAdvertiseCMP.CMPConsentString
+  public static func consentString(fromUpdatedVendorList updatedVendorList: MAdvertiseCMP.CMPVendorList, previousVendorList: MAdvertiseCMP.CMPVendorList, previousConsentString: MAdvertiseCMP.CMPConsentString, consentLanguage: MAdvertiseCMP.CMPLanguage, lastUpdated: Foundation.Date = Date()) -> MAdvertiseCMP.CMPConsentString
+  public static func consentStringByAddingConsent(forPurposeId purposeId: Swift.Int, consentString: MAdvertiseCMP.CMPConsentString, consentLanguage: MAdvertiseCMP.CMPLanguage, lastUpdated: Foundation.Date = Date()) -> MAdvertiseCMP.CMPConsentString
+  public static func consentStringByRemovingConsent(forPurposeId purposeId: Swift.Int, consentString: MAdvertiseCMP.CMPConsentString, consentLanguage: MAdvertiseCMP.CMPLanguage, lastUpdated: Foundation.Date = Date()) -> MAdvertiseCMP.CMPConsentString
+  public static func consentStringByAddingConsent(forVendorId vendorId: Swift.Int, consentString: MAdvertiseCMP.CMPConsentString, consentLanguage: MAdvertiseCMP.CMPLanguage, lastUpdated: Foundation.Date = Date()) -> MAdvertiseCMP.CMPConsentString
+  public static func consentStringByUpdateDateConsent(consentString: MAdvertiseCMP.CMPConsentString, consentLanguage: MAdvertiseCMP.CMPLanguage, lastUpdated: Foundation.Date = Date()) -> MAdvertiseCMP.CMPConsentString
+  public static func consentStringByRemovingConsent(forVendorId vendorId: Swift.Int, consentString: MAdvertiseCMP.CMPConsentString, consentLanguage: MAdvertiseCMP.CMPLanguage, lastUpdated: Foundation.Date = Date()) -> MAdvertiseCMP.CMPConsentString
+}
+@_hasMissingDesignatedInitializers @objc public class MadvertiseConsentString : ObjectiveC.NSObject, Foundation.NSCopying {
+  @objc final public let version: Swift.Int
+  @objc final public let created: Foundation.Date
+  @objc final public let lastUpdated: Foundation.Date
+  @objc final public let cmpId: Swift.Int
+  @objc final public let cmpVersion: Swift.Int
+  @objc final public let consentScreen: Swift.Int
+  @objc final public let consentLanguage: MAdvertiseCMP.CMPLanguage
+  @objc final public let vendorListVersion: Swift.Int
+  @objc final public let maxVendorId: Swift.Int
+  @objc final public let allowedPurposes: Foundation.IndexSet
+  @objc final public let allowedVendors: Foundation.IndexSet
+  @objc final public let consentString: Swift.String
+  @objc public var parsedPurposeConsents: Swift.String {
+    @objc get
+  }
+  @objc public var parsedVendorConsents: Swift.String {
+    @objc get
+  }
+  @objc convenience public init?(version: Swift.Int, created: Foundation.Date, lastUpdated: Foundation.Date, cmpId: Swift.Int, cmpVersion: Swift.Int, consentScreen: Swift.Int, consentLanguage: MAdvertiseCMP.CMPLanguage, allowedPurposes: Foundation.IndexSet, allowedVendors: Foundation.IndexSet, vendorList: MAdvertiseCMP.CMPVendorList)
+  @objc convenience public init?(version: Swift.Int, created: Foundation.Date, lastUpdated: Foundation.Date, cmpId: Swift.Int, cmpVersion: Swift.Int, consentScreen: Swift.Int, consentLanguage: MAdvertiseCMP.CMPLanguage, vendorListVersion: Swift.Int, maxVendorId: Swift.Int, allowedPurposes: Foundation.IndexSet, allowedVendors: Foundation.IndexSet)
+  @objc convenience public init(versionConfig: MAdvertiseCMP.CMPVersionConfig, created: Foundation.Date, lastUpdated: Foundation.Date, cmpId: Swift.Int, cmpVersion: Swift.Int, consentScreen: Swift.Int, consentLanguage: MAdvertiseCMP.CMPLanguage, allowedPurposes: Foundation.IndexSet, allowedVendors: Foundation.IndexSet, vendorList: MAdvertiseCMP.CMPVendorList)
+  @objc convenience public init(versionConfig: MAdvertiseCMP.CMPVersionConfig, created: Foundation.Date, lastUpdated: Foundation.Date, cmpId: Swift.Int, cmpVersion: Swift.Int, consentScreen: Swift.Int, consentLanguage: MAdvertiseCMP.CMPLanguage, vendorListVersion: Swift.Int, maxVendorId: Swift.Int, allowedPurposes: Foundation.IndexSet, allowedVendors: Foundation.IndexSet)
+  @objc public func isPurposeAllowed(purposeId: Swift.Int) -> Swift.Bool
+  @objc public func isVendorAllowed(vendorId: Swift.Int) -> Swift.Bool
+  @objc public static func from(base64 base64String: Swift.String) -> MAdvertiseCMP.MadvertiseConsentString?
+  @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
+  public static func == (lhs: MAdvertiseCMP.MadvertiseConsentString, rhs: MAdvertiseCMP.MadvertiseConsentString) -> Swift.Bool
+  @objc public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+  @objc deinit
+}
+@objc public class CMPFeature : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let id: Swift.Int
+  @objc final public let name: Swift.String
+  @objc final public let featureDescription: Swift.String
+  @objc final public let featureDescriptionLegal: Swift.String
+  @objc public init(id: Swift.Int, name: Swift.String, description: Swift.String, descriptionLegal: Swift.String)
+  @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
+  public static func == (lhs: MAdvertiseCMP.CMPFeature, rhs: MAdvertiseCMP.CMPFeature) -> Swift.Bool
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc public protocol CMPConsentManagerDelegate {
+  @objc optional func consentManagerRequestsToShowConsentTool(_ consentManager: MAdvertiseCMP.CMPConsentManager, forVendorList vendorList: MAdvertiseCMP.CMPVendorList)
+  @available(*, deprecated, message: "Implement tcfOnConsentStringDidChange:consentProvided: ")
+  @objc optional func tcfConsentStringDidChange(_ newTcfConsentString: MAdvertiseCMP.TCFString)
+  @objc optional func tcfOnConsentStringDidChange(_ newTcfConsentString: MAdvertiseCMP.TCFString, consentProvided: Swift.String)
+  @objc optional func consentManagerRequestsToPresentPrivacyPolicy(url: Swift.String)
+  @objc optional func didAcceptAllTcfConsentString()
+  @objc optional func didRefuseAllTcfConsentString()
+  @objc optional func consentManagerDidFailWithError(error: Swift.Error)
+}
+public struct DataManagement {
+}
+@objc public class CMPPurpose : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let id: Swift.Int
+  @objc final public let name: Swift.String
+  @objc final public let purposeDescription: Swift.String
+  @objc final public let purposeDescriptionLegal: Swift.String
+  @objc public init(id: Swift.Int, name: Swift.String, description: Swift.String, descriptionLegal: Swift.String)
+  @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
+  public static func == (lhs: MAdvertiseCMP.CMPPurpose, rhs: MAdvertiseCMP.CMPPurpose) -> Swift.Bool
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+public protocol CMPConsentToolManagerDelegate : AnyObject {
+  func consentToolManager(_ consentToolManager: MAdvertiseCMP.CMPConsentToolManager, didFinishWithTcfConsentString tcfConsentString: MAdvertiseCMP.TCFString)
+  func consentToolManager(_ consentToolManager: MAdvertiseCMP.CMPConsentToolManager, didChoiceWithoutTcfConsentString tcfConsentString: MAdvertiseCMP.TCFString)
+  func consentToolManager(_ consentToolManager: MAdvertiseCMP.CMPConsentToolManager, didFinishWithMadvertiseConsentString madvertiseConsentString: MAdvertiseCMP.MadvertiseConsentString)
+}
+public struct CMPConstants {
+  public struct CMPInfos {
+    public static let consentScreen: Swift.Int
+    public static let VERSION: Swift.Int
+    public static let ID: Swift.Int
+  }
+}
+public struct CMPConfig : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+}
+@objc public class CMPLanguage : ObjectiveC.NSObject {
+  @objc public static let DEFAULT_LANGUAGE: MAdvertiseCMP.CMPLanguage
+  @objc public static let VALID_LETTERS: [Swift.String]
+  @objc public static let VALID_LENGTH: Swift.Int
+  @objc final public let string: Swift.String
+  @objc public static let EUROPE_LANGUAGES: [Swift.String]
+  @objc public init?(string: Swift.String)
+  @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
+  public static func == (lhs: MAdvertiseCMP.CMPLanguage, rhs: MAdvertiseCMP.CMPLanguage) -> Swift.Bool
+  @objc deinit
+}
+@objc public class CMPVendor : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let id: Swift.Int
+  @objc final public let name: Swift.String
+  @objc final public let purposes: [Swift.Int]
+  @objc final public let legitimatePurposes: [Swift.Int]
+  @objc final public let features: [Swift.Int]
+  @objc final public let policyURL: Foundation.URL?
+  @objc final public let specialPurposes: [Swift.Int]
+  @objc final public let specialFeatures: [Swift.Int]
+  @objc final public let externalpurpose: [Swift.Int]
+  @objc final public let flexiblePurposes: [Swift.Int]
+  @objc final public let deletedDate: Foundation.Date?
+  @objc public var isActivated: Swift.Bool {
+    @objc get
+  }
+  @objc convenience public init(id: Swift.Int, name: Swift.String, purposes: [Swift.Int], legitimatePurposes: [Swift.Int], flexiblePurposes: [Swift.Int], specialPurposes: [Swift.Int], features: [Swift.Int], specialFeatures: [Swift.Int], policyURL: Foundation.URL?, externalpurpose: [Swift.Int])
+  @objc public init(id: Swift.Int, name: Swift.String, purposes: [Swift.Int], legitimatePurposes: [Swift.Int], flexiblePurposes: [Swift.Int], specialPurposes: [Swift.Int], features: [Swift.Int], specialFeatures: [Swift.Int], policyURL: Foundation.URL?, externalpurpose: [Swift.Int], deletedDate: Foundation.Date?)
+  @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
+  public static func == (lhs: MAdvertiseCMP.CMPVendor, rhs: MAdvertiseCMP.CMPVendor) -> Swift.Bool
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc public class CMPButton : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let id: Swift.Int
+  @objc final public let name: Swift.String
+  @objc final public let key: Swift.String
+  @objc final public let marginTop: Swift.Int
+  @objc final public let marginBottom: Swift.Int
+  @objc final public let opacity: Swift.Double
+  @objc public init(id: Swift.Int, name: Swift.String, key: Swift.String, marginTop: Swift.Int, marginBottom: Swift.Int, opacity: Swift.Double)
+  @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
+  public static func == (lhs: MAdvertiseCMP.CMPButton, rhs: MAdvertiseCMP.CMPButton) -> Swift.Bool
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+public struct ConsentToolManagement {
+}
+@_hasMissingDesignatedInitializers @objc public class CMPConsentString : ObjectiveC.NSObject, Foundation.NSCopying {
+  @objc final public let version: Swift.Int
+  @objc final public let created: Foundation.Date
+  @objc final public let lastUpdated: Foundation.Date
+  @objc final public let cmpId: Swift.Int
+  @objc final public let cmpVersion: Swift.Int
+  @objc final public let consentScreen: Swift.Int
+  @objc final public let consentLanguage: MAdvertiseCMP.CMPLanguage
+  @objc final public let vendorListVersion: Swift.Int
+  @objc final public let maxVendorId: Swift.Int
+  @objc final public let allowedPurposes: Foundation.IndexSet
+  @objc final public let allowedVendors: Foundation.IndexSet
+  @objc final public let consentString: Swift.String
+  @objc public var parsedPurposeConsents: Swift.String {
+    @objc get
+  }
+  @objc public var parsedVendorConsents: Swift.String {
+    @objc get
+  }
+  @objc convenience public init?(version: Swift.Int, created: Foundation.Date, lastUpdated: Foundation.Date, cmpId: Swift.Int, cmpVersion: Swift.Int, consentScreen: Swift.Int, consentLanguage: MAdvertiseCMP.CMPLanguage, allowedPurposes: Foundation.IndexSet, allowedVendors: Foundation.IndexSet, vendorList: MAdvertiseCMP.CMPVendorList)
+  @objc convenience public init?(version: Swift.Int, created: Foundation.Date, lastUpdated: Foundation.Date, cmpId: Swift.Int, cmpVersion: Swift.Int, consentScreen: Swift.Int, consentLanguage: MAdvertiseCMP.CMPLanguage, vendorListVersion: Swift.Int, maxVendorId: Swift.Int, allowedPurposes: Foundation.IndexSet, allowedVendors: Foundation.IndexSet)
+  @objc convenience public init(versionConfig: MAdvertiseCMP.CMPVersionConfig, created: Foundation.Date, lastUpdated: Foundation.Date, cmpId: Swift.Int, cmpVersion: Swift.Int, consentScreen: Swift.Int, consentLanguage: MAdvertiseCMP.CMPLanguage, allowedPurposes: Foundation.IndexSet, allowedVendors: Foundation.IndexSet, vendorList: MAdvertiseCMP.CMPVendorList)
+  @objc convenience public init(versionConfig: MAdvertiseCMP.CMPVersionConfig, created: Foundation.Date, lastUpdated: Foundation.Date, cmpId: Swift.Int, cmpVersion: Swift.Int, consentScreen: Swift.Int, consentLanguage: MAdvertiseCMP.CMPLanguage, vendorListVersion: Swift.Int, maxVendorId: Swift.Int, allowedPurposes: Foundation.IndexSet, allowedVendors: Foundation.IndexSet)
+  @objc public func isPurposeAllowed(purposeId: Swift.Int) -> Swift.Bool
+  @objc public func isVendorAllowed(vendorId: Swift.Int) -> Swift.Bool
+  @objc public static func from(base64 base64String: Swift.String) -> MAdvertiseCMP.CMPConsentString?
+  @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
+  public static func == (lhs: MAdvertiseCMP.CMPConsentString, rhs: MAdvertiseCMP.CMPConsentString) -> Swift.Bool
+  @objc public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+  @objc deinit
+}
+public struct ConsentToolColorPalette {
+}
+extension MAdvertiseCMP.TCFString {
+  public static func tcfConsentStringWithNoConsent(consentScreen: Swift.Int, consentLanguage: MAdvertiseCMP.CMPLanguage, vendorList: MAdvertiseCMP.CMPVendorList, date: Foundation.Date, publisherCC: MAdvertiseCMP.CMPLanguage) -> MAdvertiseCMP.TCFString
+  public static func tcfConsentStringWithFullConsent(consentScreen: Swift.Int, consentLanguage: MAdvertiseCMP.CMPLanguage, vendorList: MAdvertiseCMP.CMPVendorList, date: Foundation.Date, publisherCC: MAdvertiseCMP.CMPLanguage?) -> MAdvertiseCMP.TCFString
+  public static func tcfConsentStringByAddingConsent(forPurposeId purposeId: Swift.Int, tcfConsentString: MAdvertiseCMP.TCFString, consentLanguage: MAdvertiseCMP.CMPLanguage, lastUpdated: Foundation.Date = Date()) -> MAdvertiseCMP.TCFString
+  public static func tcfConsentStringByRemovingConsent(forPurposeId purposeId: Swift.Int, tcfConsentString: MAdvertiseCMP.TCFString, consentLanguage: MAdvertiseCMP.CMPLanguage, lastUpdated: Foundation.Date = Date()) -> MAdvertiseCMP.TCFString
+  public static func tcfConsentStringByAddingConsent(forVendorId vendorId: Swift.Int, tcfConsentString: MAdvertiseCMP.TCFString, consentLanguage: MAdvertiseCMP.CMPLanguage, lastUpdated: Foundation.Date = Date(), vendorList: MAdvertiseCMP.CMPVendorList) -> MAdvertiseCMP.TCFString
+  public static func tcfConsentStringByUpdateDateConsent(tcfConsentString: MAdvertiseCMP.TCFString, consentLanguage: MAdvertiseCMP.CMPLanguage, lastUpdated: Foundation.Date = Date()) -> MAdvertiseCMP.TCFString
+  public static func tcfConsentStringByRemovingConsent(forVendorId vendorId: Swift.Int, tcfConsentString: MAdvertiseCMP.TCFString, consentLanguage: MAdvertiseCMP.CMPLanguage, lastUpdated: Foundation.Date = Date()) -> MAdvertiseCMP.TCFString
+  public static func tcfConsentStringByRemovingConsent(forFeatureId featureId: Swift.Int, tcfConsentString: MAdvertiseCMP.TCFString, consentLanguage: MAdvertiseCMP.CMPLanguage, lastUpdated: Foundation.Date = Date()) -> MAdvertiseCMP.TCFString
+  public static func tcfConsentStringByAddingConsent(forFeatureId featureId: Swift.Int, tcfConsentString: MAdvertiseCMP.TCFString, consentLanguage: MAdvertiseCMP.CMPLanguage, lastUpdated: Foundation.Date = Date()) -> MAdvertiseCMP.TCFString
+  public static func tcfConsentStringByRemovingConsent(forPurposeLITId purposeLITId: Swift.Int, tcfConsentString: MAdvertiseCMP.TCFString, consentLanguage: MAdvertiseCMP.CMPLanguage, lastUpdated: Foundation.Date = Date()) -> MAdvertiseCMP.TCFString
+  public static func tcfConsentStringByAddingConsent(forPurposeLITId purposeLITId: Swift.Int, tcfConsentString: MAdvertiseCMP.TCFString, consentLanguage: MAdvertiseCMP.CMPLanguage, lastUpdated: Foundation.Date = Date()) -> MAdvertiseCMP.TCFString
+  public static func tcfConsentStringByRemovingConsent(forVendorLegitimateId vendorLegitimateId: Swift.Int, tcfConsentString: MAdvertiseCMP.TCFString, consentLanguage: MAdvertiseCMP.CMPLanguage, lastUpdated: Foundation.Date = Date()) -> MAdvertiseCMP.TCFString
+  public static func tcfConsentStringByAddingConsent(forVendorLegitimateId vendorLegitimateId: Swift.Int, tcfConsentString: MAdvertiseCMP.TCFString, consentLanguage: MAdvertiseCMP.CMPLanguage, lastUpdated: Foundation.Date = Date()) -> MAdvertiseCMP.TCFString
+  public static func tcfConsentStringByRemovingConsent(forExternalPurposeId externalPurposeId: Swift.Int, tcfConsentString: MAdvertiseCMP.TCFString, consentLanguage: MAdvertiseCMP.CMPLanguage, lastUpdated: Foundation.Date = Date()) -> MAdvertiseCMP.TCFString
+  public static func tcfConsentStringByAddingConsent(forExternalPurposeId externalPurposeID: Swift.Int, tcfConsentString: MAdvertiseCMP.TCFString, consentLanguage: MAdvertiseCMP.CMPLanguage, vendorList: MAdvertiseCMP.CMPVendorList, lastUpdated: Foundation.Date = Date()) -> MAdvertiseCMP.TCFString
+  public static func tcfConsentStringByRemovingConsent(forPubPurposeId pubPurposeId: Swift.Int, tcfConsentString: MAdvertiseCMP.TCFString, consentLanguage: MAdvertiseCMP.CMPLanguage, lastUpdated: Foundation.Date = Date()) -> MAdvertiseCMP.TCFString
+  public static func tcfConsentStringByAddingConsent(forPubPurposeId pubPurposeId: Swift.Int, tcfConsentString: MAdvertiseCMP.TCFString, consentLanguage: MAdvertiseCMP.CMPLanguage, lastUpdated: Foundation.Date = Date()) -> MAdvertiseCMP.TCFString
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class CMPConsentToolPreferencesViewController : UIKit.UITableViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, titleForHeaderInSection section: Swift.Int) -> Swift.String?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, willDisplayHeaderView view: UIKit.UIView, forSection section: Swift.Int)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func prepare(for segue: UIKit.UIStoryboardSegue, sender: Any?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(style: UIKit.UITableView.Style)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class TCFString : ObjectiveC.NSObject, Foundation.NSCopying {
+  @objc public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+  @objc final public let version: Swift.Int
+  @objc final public let created: Foundation.Date
+  @objc final public let lastUpdated: Foundation.Date
+  @objc final public let cmpId: Swift.Int
+  @objc final public let cmpVersion: Swift.Int
+  @objc final public let consentScreen: Swift.Int
+  @objc final public let consentLanguage: MAdvertiseCMP.CMPLanguage
+  @objc final public let vendorListVersion: Swift.Int
+  @objc final public let maxVendorId: Swift.Int
+  @objc final public let maxVendorLigId: Swift.Int
+  @objc final public let allowedPurposes: Foundation.IndexSet
+  @objc final public let allowedVendors: Foundation.IndexSet
+  @objc final public let tcfString: Swift.String
+  @objc public var parsedPurposeConsents: Swift.String {
+    @objc get
+  }
+  @objc public var parsePurposeLegitimateInterests: Swift.String {
+    @objc get
+  }
+  @objc public var parseSpecialFeatureOptIns: Swift.String {
+    @objc get
+  }
+  @objc public var parsePubPurposesConsent: Swift.String {
+    @objc get
+  }
+  @objc public var parsedVendorConsents: Swift.String {
+    @objc get
+  }
+  @objc public var parsedVendorLegitimateInterestConsents: Swift.String {
+    @objc get
+  }
+  @objc final public let tcfPolicyVersion: Swift.Int
+  @objc final public let isServiceSpecific: Swift.Bool
+  @objc final public let useNonStandardStacks: Swift.Bool
+  @objc final public let specialFeatureOptIns: Foundation.IndexSet
+  @objc final public let purposesLITransparency: Foundation.IndexSet
+  @objc final public let isPurposeOneTreatment: Swift.Bool
+  @objc final public let publisherCC: MAdvertiseCMP.CMPLanguage
+  @objc final public let vendorLegitimateInterest: Foundation.IndexSet
+  @objc public var publisherRestrictions: [MAdvertiseCMP.CMPPublisherRestrictionEntry]
+  @objc final public let pubPurposesConsent: Foundation.IndexSet
+  @objc convenience public init?(version: Swift.Int, created: Foundation.Date, lastUpdated: Foundation.Date, cmpId: Swift.Int, cmpVersion: Swift.Int, consentScreen: Swift.Int, consentLanguage: MAdvertiseCMP.CMPLanguage, vendorListVersion: Swift.Int, maxVendorId: Swift.Int, maxVendorLigId: Swift.Int, allowedPurposes: Foundation.IndexSet, allowedVendors: Foundation.IndexSet, tcfPolicyVersion: Swift.Int, isServiceSpecific: Swift.Bool, useNonStandardStacks: Swift.Bool, specialFeatureOptIns: Foundation.IndexSet, purposesLITransparency: Foundation.IndexSet, isPurposeOneTreatment: Swift.Bool, publisherCC: MAdvertiseCMP.CMPLanguage, vendorLegitimateInterest: Foundation.IndexSet, publisherRestrictions: [MAdvertiseCMP.CMPPublisherRestrictionEntry], pubPurposesConsent: Foundation.IndexSet)
+  @objc public func isPurposeAllowed(purposeId: Swift.Int) -> Swift.Bool
+  @objc public func isVendorAllowed(vendorId: Swift.Int) -> Swift.Bool
+  @objc public func isSpecialFeatureAllowed(featureId: Swift.Int) -> Swift.Bool
+  @objc public func isPurposeLITransparencyAllowed(purposeId: Swift.Int) -> Swift.Bool
+  @objc public func ispurposeLITransparencyAllowed(purposeId: Swift.Int) -> Swift.Bool
+  @objc public func isVendorLegitimateInterest(vendorId: Swift.Int) -> Swift.Bool
+  @objc public func isPublisherRestrictions(restrictionId: Swift.Int) -> Swift.Bool
+  @objc public func isPubPurposesConsent(pubPurposeConsentID: Swift.Int) -> Swift.Bool
+  public static func == (lhs: MAdvertiseCMP.TCFString, rhs: MAdvertiseCMP.TCFString) -> Swift.Bool
+  @objc public static func from(base64 base64String: Swift.String) -> MAdvertiseCMP.TCFString?
+  @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc deinit
+}
+@objc public class CMPPublisherRestrictionEntry : ObjectiveC.NSObject, Swift.Codable {
+  public enum CMPRestrictionEntry : Swift.Int {
+    case NOT_ALLOWED
+    case REQUIRE_CONSENT
+    case REQUIRE_LEGITIMATE_INTEREST
+    case UNDEFINED
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public var purposeId: Swift.Int
+  public var restrictionType: Swift.Int
+  @objc public var vendors: [Swift.Int]
+  public func getResttictionById(id: Swift.Int) -> MAdvertiseCMP.CMPPublisherRestrictionEntry.CMPRestrictionEntry
+  public init(purposeId: Swift.Int, restrictionType: Swift.Int, vendors: [Swift.Int])
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+public class CMPConsentToolManager {
+  public init(delegate: MAdvertiseCMP.CMPConsentToolManagerDelegate, language: MAdvertiseCMP.CMPLanguage, tcfConsentString: MAdvertiseCMP.TCFString?, madvertiseConsentString: MAdvertiseCMP.MadvertiseConsentString?, vendorList: MAdvertiseCMP.CMPVendorList, configuration: MAdvertiseCMP.CMPConsentToolConfiguration?, publisherCC: MAdvertiseCMP.CMPLanguage, consentToolAutoClose: Swift.Bool)
+  @objc deinit
+}
+@objc public class CMPStack : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let id: Swift.Int
+  @objc final public let name: Swift.String
+  @objc final public let stackDescription: Swift.String
+  @objc final public let purposes: [Swift.Int]
+  @objc public var specialFeatures: [Swift.Int]
+  @objc public var externalPurposes: [Swift.Int]
+  @objc public init(id: Swift.Int, name: Swift.String, description: Swift.String, purposes: [Swift.Int], specialFeatures: [Swift.Int], externalPurposes: [Swift.Int])
+  @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
+  public static func == (lhs: MAdvertiseCMP.CMPStack, rhs: MAdvertiseCMP.CMPStack) -> Swift.Bool
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc public class CMPExternalVendor : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let id: Swift.String
+  @objc final public let name: Swift.String
+  @objc final public let policyUrl: Foundation.URL?
+  @objc public var purposes: [Swift.Int]
+  @objc public var externalpurpose: [Swift.Int]
+  @objc public var specialPurposes: [Swift.Int]
+  @objc public var features: [Swift.Int]
+  @objc public var specialFeatures: [Swift.Int]
+  @objc public init(id: Swift.String, name: Swift.String, policyUrl: Foundation.URL?, purposes: [Swift.Int], externalpurpose: [Swift.Int], specialPurposes: [Swift.Int], features: [Swift.Int], specialFeatures: [Swift.Int])
+  @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
+  public static func == (lhs: MAdvertiseCMP.CMPExternalVendor, rhs: MAdvertiseCMP.CMPExternalVendor) -> Swift.Bool
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+extension MAdvertiseCMP.CMPPublisherRestrictionEntry.CMPRestrictionEntry : Swift.Equatable {}
+extension MAdvertiseCMP.CMPPublisherRestrictionEntry.CMPRestrictionEntry : Swift.Hashable {}
+extension MAdvertiseCMP.CMPPublisherRestrictionEntry.CMPRestrictionEntry : Swift.RawRepresentable {}
