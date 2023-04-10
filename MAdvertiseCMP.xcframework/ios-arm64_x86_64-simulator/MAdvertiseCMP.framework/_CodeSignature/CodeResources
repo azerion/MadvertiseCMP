@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		4DKWwdMoaJPzNtkCTfB+I0s5q3k=
+		NVU/E2ZUbUqqm0o0tAOEf9b0Vvw=
 		</data>
 		<key>CMPConsentTool.storyboardc/5uE-BU-uBY-view-exT-9Z-Tl6.nib</key>
 		<data>
@@ -74,7 +74,7 @@
 		</data>
 		<key>Headers/MAdvertiseCMP-Swift.h</key>
 		<data>
-		WBY/qXQukftFhnxbnSf4H1v6lZg=
+		vxii6GfQCZ9Jk+yq/nVLHoGnp+0=
 		</data>
 		<key>Headers/MAdvertiseCMP.h</key>
 		<data>
@@ -82,7 +82,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		r6J4umgQF5LWfv+AIOZLJ0z0an4=
+		K9ILxKmlGtqm6OgJ2pP506X1jJE=
+		</data>
+		<key>Modules/MAdvertiseCMP.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<data>
+		EOqXMYLqYU8QinyP/t7XeglB2y8=
+		</data>
+		<key>Modules/MAdvertiseCMP.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		OQ0QfyZtexlkitemy4hg7zU4LwM=
+		</data>
+		<key>Modules/MAdvertiseCMP.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<data>
+		hYPQ3ILN9AWIseePkFhQFu0cqZI=
+		</data>
+		<key>Modules/MAdvertiseCMP.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<data>
+		OQ0QfyZtexlkitemy4hg7zU4LwM=
+		</data>
+		<key>Modules/MAdvertiseCMP.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
+		<data>
+		x0PHSmbFLiSMV+ThfdabSaeXvGk=
 		</data>
 		<key>Modules/MAdvertiseCMP.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -90,19 +110,19 @@
 		</data>
 		<key>Modules/MAdvertiseCMP.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		khNVEeRgmzKS9cbk8KVNtbUAdlU=
+		UuqG/jxkiue/upVaEq9NooBhHEU=
 		</data>
 		<key>Modules/MAdvertiseCMP.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		x+BcSYWErATd3VaC/hTRsFLjoCo=
+		/QcikZNzst01vFPPVCV+QpReRVc=
 		</data>
 		<key>Modules/MAdvertiseCMP.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		khNVEeRgmzKS9cbk8KVNtbUAdlU=
+		UuqG/jxkiue/upVaEq9NooBhHEU=
 		</data>
 		<key>Modules/MAdvertiseCMP.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		iGO/VoZOeS2XQJNMBMvdBD//T5c=
+		kanNNUVoorlThzgP/znn42Bqv+c=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -115,7 +135,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			UqQZyQytafNSGXKErsi+yjTf9bvqgqZVOVTQhV2EgqU=
+			AWtgVbqw8bCOWh0SxHklZ9yXUp+lvRpcE73A1oEkHTk=
 			</data>
 		</dict>
 		<key>CMPConsentTool.storyboardc/5uE-BU-uBY-view-exT-9Z-Tl6.nib</key>
@@ -234,7 +254,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LyWtjEJICM5HjS9NQXs/PuPwxjhFgo34D6CWWGBGLZM=
+			Nmt82NUDgHd9/B5pR1w1+dz2pp2e2ximUwA3CMlCMw0=
 			</data>
 		</dict>
 		<key>Headers/MAdvertiseCMP.h</key>
@@ -242,6 +262,41 @@
 			<key>hash2</key>
 			<data>
 			G7jEkYTqkLH37hKXPEW1vbvwtXqaDDaZqVogOcZIkV0=
+			</data>
+		</dict>
+		<key>Modules/MAdvertiseCMP.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			1lkYUvaSUJhdxb7Cpm2ANoQxpcldX8CSypvmOPaxgfg=
+			</data>
+		</dict>
+		<key>Modules/MAdvertiseCMP.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			k6cPMen5uqAKNcM7ElRWfRIkjWvHFStV8w3PnB2xw8Y=
+			</data>
+		</dict>
+		<key>Modules/MAdvertiseCMP.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			U6ZJ6YKb05MZkRd26lnti5cZCoOLNmBowAxoRCbT4R0=
+			</data>
+		</dict>
+		<key>Modules/MAdvertiseCMP.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			k6cPMen5uqAKNcM7ElRWfRIkjWvHFStV8w3PnB2xw8Y=
+			</data>
+		</dict>
+		<key>Modules/MAdvertiseCMP.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			oJDn9ocChAYBPjCtrY3LPfhsYGIrg+CF5AVapTh02eQ=
 			</data>
 		</dict>
 		<key>Modules/MAdvertiseCMP.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -255,28 +310,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XExp6v6JJ6WTN2Bhe3ZnaO3E7Em9kjKdWxPkDsIla+A=
+			tZb5e6tDbYW5M0a7ZT+ES+MlAmPo4JBUnA1qk/jcN8U=
 			</data>
 		</dict>
 		<key>Modules/MAdvertiseCMP.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Le/yoTabWQk6+dY3wg24yr5/51LiKryJ/I9agHVuXVA=
+			SQrf0+f+ELkZCvYeTvMrQKMFL32SSlVOZKqhPSxs0yY=
 			</data>
 		</dict>
 		<key>Modules/MAdvertiseCMP.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XExp6v6JJ6WTN2Bhe3ZnaO3E7Em9kjKdWxPkDsIla+A=
+			tZb5e6tDbYW5M0a7ZT+ES+MlAmPo4JBUnA1qk/jcN8U=
 			</data>
 		</dict>
 		<key>Modules/MAdvertiseCMP.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			89IVrotYFXV6aOOAKcWjrKtbY+qCvSf3UivmXAPXS0w=
+			hA4KY/PG9NJGzgcQDvSE9HJRXOMeVQzkB1lEH+eRAAA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
