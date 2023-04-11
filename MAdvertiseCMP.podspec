@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.author           = { "MAdvertise" => "http://madvertise.com/",
               "Technical Assistance" => "admin@madvertise.com"
               }
-  s.source           = { :http => "https://bitbucket.org/mngcorp/madvertise-gdpr-cmp-ios/downloads/MAdvertiseCMP-v62.zip" }
+   s.source           = { :git => "https://github.com/azerion/MadvertiseCMP.git", :tag => "v#{s.version}" }
 
   s.platform     = :ios, '12.0'
   s.requires_arc = true
