@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "MAdvertiseCMP"
-  s.version          = "63"
+  s.version          = "64"
 
   s.summary          = "MAdvertise's CMP - Compliant with IAB Transparency and Consent Framework and Consent String and Vendor List v1.1 specifications"
 
